@@ -2176,13 +2176,13 @@ table td {
     }
 
     .video-slide-title {
-        max-width: 290px;
+        max-width: 240px;
         width: 100%;
         margin: 0 auto 35px;
     }
 
     .slick-arrow {
-        top: 85px;
+        top: 100px;
         bottom: auto;
     }
 
