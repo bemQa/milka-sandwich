@@ -27,9 +27,12 @@ $(document).ready(function () {
     function OpenPopup(popupId) {
         $('body').removeClass('no-scrolling');
         $('.popup').removeClass('js-popup-show');
+        $('.popup-overlay').remove();
         popupId = '#' + popupId;
         $(popupId).addClass('js-popup-show');
         $('body').addClass('no-scrolling');
+        $('.popup').prepend('<div class="popup-overlay"></div>');
+        overlayClosePopup();
     }
     $('.pop-op').click(function (e) {
         e.preventDefault();
@@ -41,6 +44,7 @@ $(document).ready(function () {
             e.preventDefault();
             $('.popup').removeClass('js-popup-show');
             $('body').removeClass('no-scrolling');
+            $('.popup-overlay').remove();
         });
     }
     closePopup();
@@ -48,7 +52,16 @@ $(document).ready(function () {
         popupId = '#' + popupId;
         $(popupId).removeClass('js-popup-show');
         $('body').removeClass('no-scrolling');
+        $('.popup-overlay').remove();
     }
+    function overlayClosePopup() {
+        $('.popup-overlay').on('click', function (e) {
+            $('.popup').removeClass('js-popup-show');
+            $('body').removeClass('no-scrolling');
+            $('.popup-overlay').remove();
+        });
+    }
+    overlayClosePopup();
 
     function openAccordion() {
         var wrap = $('.accordion-wrap');

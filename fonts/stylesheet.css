@@ -1,10 +1,9 @@
 @font-face {
     font-family: 'Futura PT';
-    src: url('FuturaPT-Heavy.eot');
-    src: local('Futura PT Heavy'), local('FuturaPT-Heavy'),
-        url('FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
-        url('FuturaPT-Heavy.woff2') format('woff2'),
-        url('FuturaPT-Heavy.woff') format('woff');
+    src: url('FuturaPT-DemiBold.eot');
+    src: url('FuturaPT-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('FuturaPT-DemiBold.woff2') format('woff2'),
+        url('FuturaPT-DemiBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }

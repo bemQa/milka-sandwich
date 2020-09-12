@@ -527,7 +527,7 @@ footer {
 .play-link::after {
     content: '';
     position: absolute;
-    top: -1px;
+    top: 0;
     left: 0;
     bottom: 0;
     width: 11px;
@@ -695,6 +695,18 @@ footer {
     background: url(../img/ellipses.png) center no-repeat;
     background-size: 1382px;
     z-index: 1;
+    transition: all .2s linear;
+    animation: 2s ell infinite ease-out;
+}
+
+@keyframes ell {
+    0%,
+    100% {
+        background-size: 1382px;
+    }
+    50% {
+        background-size: 1282px;
+    }
 }
 
 .title-wrapper {
@@ -903,6 +915,11 @@ footer {
     text-align: center;
     color: #fff;
     border-radius: 40px;
+    padding-bottom: 4px;
+}
+
+.coupon-btn span {
+    margin-left: 4px;
 }
 
 .coupon-btn-5ka {
@@ -930,6 +947,7 @@ footer {
     width: 124px;
     height: 74px;
     margin: auto;
+    transition: all .2s linear;
 }
 
 .coupons-choice::before {
@@ -943,6 +961,18 @@ footer {
     margin: auto;
     background: url(../img/arrow-left.svg) center no-repeat;
     background-size: contain;
+    transition: all .2s linear;
+    animation: 1s arrow-left infinite linear;
+}
+
+@keyframes arrow-left {
+    0%,
+    100% {
+        left: -30px;
+    }
+    50% {
+        left: -35px;
+    }
 }
 
 .coupons-choice::after {
@@ -956,6 +986,18 @@ footer {
     margin: auto;
     background: url(../img/arrow-right.svg) center no-repeat;
     background-size: contain;
+    transition: all .2s linear;
+    animation: 1s arrow-right infinite linear;
+}
+
+@keyframes arrow-right {
+    0%,
+    100% {
+        right: -30px;
+    }
+    50% {
+        right: -35px;
+    }
 }
 
 .coupons-choice span {
@@ -1232,6 +1274,7 @@ footer {
     text-align: center;
     color: #fff;
     border-radius: 20px;
+    padding-bottom: 2px;
 }
 
 .product-btn-lu {
@@ -1363,6 +1406,15 @@ footer {
 
 .faq-text table td:nth-child(3) {
     width: 170px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 .popup {
@@ -2032,6 +2084,16 @@ table td {
     .where-block::before {
         top: 0;
         background-size: 1150px;
+    }
+
+    @keyframes ell {
+        0%,
+        100% {
+            background-size: 1150px;
+        }
+        50% {
+            background-size: 700px;
+        }
     }
 
     .shops {
