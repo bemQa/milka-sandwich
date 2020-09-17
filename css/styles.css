@@ -487,6 +487,10 @@ footer {
     margin: auto;
 }
 
+.no-rules {
+   max-width: 800px; 
+}
+
 .menu-links {
     display: flex;
     justify-content: space-between;
